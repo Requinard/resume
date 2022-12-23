@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.156",
+    "@react-spring/web": "^9.6.1",
     "@requinard/eslint-config": "^0.3.2",
     "@svgr/core": "^6.5.1",
     "@types/react": "^18.0.26",

@@ -1,6 +1,5 @@
 import {
     Alert,
-    Avatar,
     Button,
     Container,
     Divider,
@@ -10,12 +9,11 @@ import {
 } from "@mui/material";
 import { ReactNode } from "react";
 
-import MainAvatar from "../assets/avatar.png?preset=thumbnail";
-
 import { Job } from "./Job";
 import { SectionHeader } from "./SectionHeader";
 import { Education } from "./Education";
 import { FlatList, FlatListHeader, FlatListItem } from "./FlatList";
+import { Headshot } from "./Headshot";
 
 import LocationIcon from "~icons/mdi/map-marker-outline";
 import EmailIcon from "~icons/mdi/at";
@@ -120,11 +118,7 @@ export const Resume = () => {
                     alignItems={"stretch"}
                     justifyContent={"center"}
                 >
-                    <Avatar
-                        src={MainAvatar[1].src}
-                        alt={"A headshot"}
-                        sx={{ flex: 1, width: "100%", height: "auto" }}
-                    />
+                    <Headshot />
                 </Grid>
                 <Grid
                     item
