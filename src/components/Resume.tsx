@@ -1,6 +1,6 @@
 import {Avatar, Container, Divider, Grid, Paper, Typography} from "@mui/material";
 import {Job} from "./Job";
-import MainAvatar from './avatar.png'
+import MainAvatar from "../assets/avatar.png?preset=thumbnail"
 
 export const Resume = () => {
     return <Container>
@@ -23,11 +23,11 @@ export const Resume = () => {
                     <Divider/>
                 </Grid>
                 <Grid item md={2} alignItems={'stretch'}>
-                    <Avatar src={MainAvatar}
+                    <Avatar src={MainAvatar[1].src}
                             alt={'A headshot'} sx={{flex: 1, width: '100%', height: 'auto'}}/>
                 </Grid>
                 <Grid item md={10} alignItems={'center'} display={'flex'}>
-                    <Typography sx={{pl: 4}}  variant={'body2'}>
+                    <Typography sx={{pl: 4}} variant={'body2'}>
                         I am a talented software engineer with a passion for scalable and secure software. I can work
                         with many different programming languages and I have a real knack for architecting large and
                         reliable software solutions. I'm looking for a job that lets me work on the leading edge of
