@@ -1,5 +1,5 @@
-import { Box, Collapse, Stack, Typography } from "@mui/material";
-import { ReactNode } from "react";
+import { Box, Collapse, Stack, Typography, useTheme } from "@mui/material";
+import { ReactNode, useMemo } from "react";
 import { useBoolean } from "usehooks-ts";
 
 type JobProps = {
@@ -15,16 +15,25 @@ export const Job = ({
     subtitle,
     defaultCollapsed,
 }: JobProps) => {
+    const theme = useTheme();
     const { value, toggle } = useBoolean(!defaultCollapsed);
+    const wide = useMemo(() => theme.breakpoints.up("md"), [theme]);
     return (
         <Box display={"flex"} flexDirection={"column"}>
-            <Box display={"flex"} mt={1} mb={1}>
+            <Box
+                display={"flex"}
+                mt={1}
+                mb={1}
+                flexDirection={wide ? "row" : "column"}
+                flexWrap={"wrap"}
+            >
                 <Typography
                     fontWeight={500}
                     fontSize={"1.1rem"}
                     onClick={toggle}
                     sx={{
                         flex: 1,
+                        width: wide ? "100%" : undefined,
                         ":hover": {
                             textDecoration: "underline",
                         },
@@ -32,7 +41,13 @@ export const Job = ({
                 >
                     {title}
                 </Typography>
-                <Typography fontWeight={200} fontSize={"0.9rem"}>
+                <Typography
+                    fontWeight={200}
+                    fontSize={"0.9rem"}
+                    sx={{
+                        width: wide ? "100%" : undefined,
+                    }}
+                >
                     {subtitle}
                 </Typography>
             </Box>

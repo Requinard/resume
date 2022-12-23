@@ -48,7 +48,7 @@ export const Resume = () => {
             <Grid container spacing={2}>
                 <Grid
                     item
-                    md={8}
+                    md={9}
                     display={"flex"}
                     flexDirection={"column"}
                     justifyContent={"center"}
@@ -65,10 +65,15 @@ export const Resume = () => {
                         DevOps Software Engineer
                     </Typography>
                 </Grid>
-                <Grid item md={1}>
-                    <Divider orientation={"vertical"} />
-                </Grid>
-                <Grid item md={3}>
+                <Grid
+                    item
+                    md={3}
+                    sx={(theme) => ({
+                        [theme.breakpoints.up("md")]: {
+                            borderLeft: `1px solid ${theme.palette.divider}`,
+                        },
+                    })}
+                >
                     <Button
                         size={"small"}
                         startIcon={<WebpageIcon />}

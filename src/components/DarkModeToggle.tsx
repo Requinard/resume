@@ -21,6 +21,7 @@ export const DarkModeToggle = () => {
                 bottom: theme.spacing(4),
                 right: theme.spacing(4),
                 displayPrint: "none",
+                bgcolor: theme.palette.background.paper,
             })}
         >
             <ToggleButton value={"light"} title={"Light Mode"}>
