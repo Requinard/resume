@@ -49,6 +49,7 @@ export const Resume = () => {
                 <Grid
                     item
                     md={9}
+                    xs={12}
                     display={"flex"}
                     flexDirection={"column"}
                     justifyContent={"center"}
@@ -68,6 +69,7 @@ export const Resume = () => {
                 <Grid
                     item
                     md={3}
+                    xs={12}
                     sx={(theme) => ({
                         [theme.breakpoints.up("md")]: {
                             borderLeft: `1px solid ${theme.palette.divider}`,
@@ -111,14 +113,26 @@ export const Resume = () => {
                 <Grid item xs={12}>
                     <Divider />
                 </Grid>
-                <Grid item md={2} alignItems={"stretch"}>
+                <Grid
+                    item
+                    md={2}
+                    xs={12}
+                    alignItems={"stretch"}
+                    justifyContent={"center"}
+                >
                     <Avatar
                         src={MainAvatar[1].src}
                         alt={"A headshot"}
                         sx={{ flex: 1, width: "100%", height: "auto" }}
                     />
                 </Grid>
-                <Grid item md={10} alignItems={"center"} display={"flex"}>
+                <Grid
+                    item
+                    xs={12}
+                    md={10}
+                    alignItems={"center"}
+                    display={"flex"}
+                >
                     <Typography sx={{ pl: 4 }} variant={"body2"}>
                         I am a talented software engineer with a passion for
                         scalable and secure software. I can work with many
@@ -132,7 +146,7 @@ export const Resume = () => {
                 <Grid item xs={12}>
                     <Divider />
                 </Grid>
-                <Grid item md={9}>
+                <Grid item md={9} xs={12}>
                     <SectionHeader variant={"h4"}>
                         Work Experience
                     </SectionHeader>
@@ -384,7 +398,7 @@ export const Resume = () => {
                         Ad Magazine delivery in the hilly countryside of Limburg
                     </Job>
                 </Grid>
-                <Grid item md={3}>
+                <Grid item md={3} xs={12}>
                     <SectionHeader variant={"h4"}>Education</SectionHeader>
 
                     <Education
