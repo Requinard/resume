@@ -1,6 +1,6 @@
 import {createTheme, CssBaseline, responsiveFontSizes, ThemeProvider} from "@mui/material";
 import React, {useMemo} from "react";
-import {useTernaryDarkMode} from 'usehooks-ts'
+import {useMediaQuery, useTernaryDarkMode} from 'usehooks-ts'
 import {orange} from "@mui/material/colors";
 import {Resume} from "./Resume";
 import {DarkModeToggle} from "./DarkModeToggle";
@@ -13,7 +13,7 @@ export const App = () => {
             palette: {
                 mode: isDarkMode ? "dark" : "light",
                 primary: {
-                    main: orange[500]
+                    main: orange[800]
                 }
             },
             typography: {

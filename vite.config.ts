@@ -12,7 +12,6 @@ export default defineConfig({
         scale: 1
     }), checker({
         typescript: true,
-
     }),
         imagePresets({
             thumbnail: widthPreset({

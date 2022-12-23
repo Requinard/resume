@@ -14,7 +14,12 @@ export const DarkModeToggle = () => {
             console.log(v)
             setTernaryDarkMode(v)
         }}
-        sx={(theme) => ({position: 'fixed', bottom: theme.spacing(4), right: theme.spacing(4)})}>
+        sx={(theme) => ({
+            position: 'fixed',
+            bottom: theme.spacing(4),
+            right: theme.spacing(4),
+            displayPrint: "none"
+        })}>
         <ToggleButton value={'light'} title={'Light Mode'}>
             <LightModeIcon/>
         </ToggleButton>
