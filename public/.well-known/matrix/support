@@ -1,0 +1,7 @@
+{
+  admins: [{
+    matrix_id: "@requinard:subjectreview.eu",
+    email_address: "requinard@subjectreview.eu",
+    role: "admin"
+  }]
+}
